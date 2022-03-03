@@ -43,6 +43,7 @@ let buttonRegister = document.createElement("input");
 buttonRegister.setAttribute("type", "submit");
 buttonRegister.setAttribute("value", "Registrarse");
 buttonRegister.setAttribute("class", "buttonSubmit");
+buttonRegister.setAttribute("id", "buttonRegistro");
 formRegister.appendChild(buttonRegister);
 
 let buttonGoogle = document.createElement("input");
@@ -55,6 +56,9 @@ formRegister.appendChild(buttonGoogle);
 //root log in
 const buttonLogIn = document.getElementById("btnLogIn");
 buttonLogIn.addEventListener("click", 
+
+
+
 
 function logIn() {
    
