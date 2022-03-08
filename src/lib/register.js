@@ -9,7 +9,7 @@ export function registerMe() {
     console.log('registerMe');
   window.location.hash = '/register';
 
-  const root = document.getElementById('rootRegister');
+  const root = document.getElementById('root');
   root.innerHTML = `<h4>Crear Cuenta</h4>
     <input id="name" placeholder="Nombre de usuario">
     <input id="email" type="email" placeholder="Ingresa tu Email">
