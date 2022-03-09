@@ -9,11 +9,22 @@ export function loginMe() {
     window.location.hash = '/login';
   
    const root = document.getElementById('root');
-    root.innerHTML = `<h4>Iniciar sesión</h4>
-      <input id="email" type="email" placeholder="Ingresa tu Email">
-      <input id="password" type="password" placeholder="Ingresa tu contraseña">
-      <button id="btnLogin">iniciar sesión</button>
-      <button id="btnGoogleLogin"> Usar cuenta de google Google</button>`;
+    root.innerHTML = ` <div class="containerLogin" id="containerLogin"> 
+      
+    <img src="/imagenes/logo-lucchi.png" id="logoLogin">
+    <label class="labelLoginMe">Ingresa tu Email</label>
+    <input class="inputLoginMe" id="email" type="email">
+
+    <label class="labelLoginMe">Ingresa tu contraseña</label>
+    <input class="inputLoginMe" id="password" type="password"><br>
+    <p class="mensajeError" style="color:black;""> </p>
+   
+    <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
+    <p class="txtGoogle">O iniciar sesión con</p> 
+    <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
+
+      </div>
+      `;
   
     document.getElementById('btnLogin').addEventListener('click', login);
     document.getElementById('btnGoogleLogin').addEventListener('click', registerGoogle);
@@ -32,12 +43,16 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
   .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
-    console.log(user);
+      console.log(user);
+      root.querySelector(".mensajeError").innerHTML = '';
+     
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log(errorCode + errorMessage);
+  
+    root.querySelector(".mensajeError").innerHTML = errorMessage;
+    console.log(errorCode); 
   });
 }

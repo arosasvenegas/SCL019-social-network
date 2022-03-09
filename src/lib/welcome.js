@@ -5,14 +5,12 @@ import { registerMe } from "./register.js";
 export function welcomePage () {
   
  const welcome =document.createElement('div');
-  const welcomeView = `
-    <h1>Bienvenida/o</h1>
-          
-          <button class="login" id="btnLogin" type="submit" >Iniciar Sesión</button>
-          
-          
-          <button class="register" id="btnRegister" type="submit">Registrarse</button>
-          
+                 
+  const welcomeView = ` <div class="containerWelcome" id="containerWelcome"> 
+          <img src="/imagenes/logo-lucchi.png" id="logoWelcome">
+          <button class="btn1 login" id="btnLogin" type="submit" >Iniciar Sesión</button> <br>
+          <button class="btn2 register" id="btnRegister" type="submit">Registrarse</button>
+          </div>
         `
         welcome.innerHTML=welcomeView
 

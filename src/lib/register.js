@@ -1,17 +1,19 @@
 import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider,signInWithPopup} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import {app } from "../Firebase.js";
+import { login } from "./login.js";
 
 
 
 // // ___________________REGISTRARSE___________________
 // Función que muestra formulario de registro
 export function registerMe() {
-    console.log('registerMe');
+
   window.location.hash = '/register';
 
   const root = document.getElementById('root');
   root.innerHTML = `<div class="containerRegister" id="containerRegister">
-    <h4 class="tittleRegisterMe">Crear Cuenta</h4>
+    
+    <img src="/imagenes/logo-lucchi.png" id="logoRegister">
     <label class="labelRegisterMe">Nombre de usuario</label>
     <input class="inputRegisterMe" id="name">
 
@@ -20,10 +22,11 @@ export function registerMe() {
 
     <label class="labelRegisterMe">Ingresa tu contraseña</label>
     <input class="inputRegisterMe" id="password" type="password"><br>
+    <p class="mensajeError" style="color:black;"> </p>
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
-    <p class="txtGoogle">O</p> 
-    <button class="buttonRegisterMe" id="btnGoogle"> Usar cuenta de Google</button>
+    <p class="txtGoogle">O registrar con</p> 
+    <button class="buttonRegisterGoogle" id="btnGoogle"> Usar cuenta de Google</button>
     </div>`;
     
   document.getElementById('btnRegister').addEventListener('click', register);
@@ -46,16 +49,19 @@ export function register() {
     const user = userCredential.user;
     check(alert('La cuenta se ha creado exitosamente'))
     console.log(user);
+    root.querySelector(".mensajeError").innerHTML= '';
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
+    root.querySelector(".mensajeError").innerHTML = errorMessage;
     console.log(errorCode);
-    console.log(errorMessage);
+    
 });
 }
+
 
 export const registerGoogle = () => {
     signInWithPopup(auth, provider)

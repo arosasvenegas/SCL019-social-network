@@ -1,0 +1,228 @@
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+  }
+
+  .containerWelcome{
+    color: white;
+    width: 375px;
+    height: 667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('imagenes/fondopatas.png');
+    background-size: cover;
+  }
+
+  #logoWelcome{
+    margin-bottom: 25px;
+  }
+
+  
+
+  .btn1 {
+    border: 2px solid black;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 25px;
+  }
+  
+  
+  .login {
+    border-color: #ffffff;
+    background:transparent;
+  }
+  
+  .login:hover {
+    background-color: #ffffff;
+    color: rgba(246,91,85,1);
+  }
+
+  
+  .btn2 {
+    
+    color: rgba(246,91,85,1);
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top:18px;
+  }
+  
+  
+  .register {
+    border-color: #ffffff;
+    background:white;
+  }
+  
+  .register:hover {
+    background-color: rgba(254,186,129,1);
+    color: white
+  }
+
+
+  /*vista REGISTER */
+
+  
+  .containerRegister {
+    background-color: #febd81;
+    color: #c16b55;
+    width: 375px;
+    height: 667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #logoRegister{
+    margin-bottom: 25px;
+    width: 130px;
+  }
+
+  /* .tittleRegisterMe {
+    color: #c16b55;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+  } */
+
+  .labelRegisterMe {
+    
+    margin-bottom: 5px;
+  
+  }
+  .inputRegisterMe {
+    border: none;
+    background-color: white;
+    border-radius: 25px;
+    width: 258px;
+    height: 33px;
+    left: 31px;
+    margin-bottom: 25px;
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .mensajeError{
+    margin-bottom: 20px;
+  }
+
+  .txtGoogle {
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .buttonRegisterMe {
+    border-radius: 25px;
+    width: 182px;
+    height: 30px;
+    left: 70px;
+    top: 410px;
+    border: none;
+    background-color: white;
+    color: #c16b55;
+    margin-bottom: 25px;
+  }
+
+  .buttonRegisterMe:hover {
+    background-color: rgb(246, 91, 85);
+    color: white;
+  }
+
+  
+  .buttonRegisterGoogle {
+    border-radius: 25px;
+    width: 182px;
+    height: 30px;
+    left: 70px;
+    top: 410px;
+    border: none;
+    background-color: white;
+    color: #c16b55;
+    margin-bottom: 25px;
+  }
+  
+
+  .buttonRegisterGoogle:hover {
+    background-color: rgb(50, 27, 251);
+    color: white;
+  }
+
+
+/* VISTA LOG IN */
+
+.containerLogin {
+  background-color: rgba(246,91,85,1);
+  color: #FED1A7;
+  width: 375px;
+  height: 667px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#logoLogin{
+  margin-bottom: 40px;
+  width: 130px;
+}
+
+
+.labelLoginMe {
+    
+  margin-bottom: 5px;
+
+}
+
+
+.inputLoginMe {
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  width: 258px;
+  height: 33px;
+  left: 31px;
+  margin-bottom: 25px;
+}
+
+
+.buttonLoginMe {
+  border-radius: 25px;
+  width: 182px;
+  height: 30px;
+  left: 70px;
+  top: 410px;
+  border: none;
+  background-color: white;
+  color: #c16b55;
+  margin-bottom: 25px;
+} 
+
+.buttonLoginMe:hover {
+  background-color: rgba(254,189,129);
+  color: white;
+}
+
+.buttonLoginGoogle {
+  border-radius: 25px;
+  width: 182px;
+  height: 30px;
+  left: 70px;
+  top: 410px;
+  border: none;
+  background-color: white;
+  color: #c16b55;
+  margin-bottom: 25px;
+}
+
+
+.buttonLoginGoogle:hover {
+  background-color: rgb(50, 27, 251);
+  color: white;
+}
