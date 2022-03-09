@@ -6,7 +6,7 @@ import {registerMe} from "./register.js";
 export function router (){
 
    const root = document.getElementById('root');
-   root.innerHTML = '';
+   //root.innerHTML = '';
   
         if (window.location.hash === '/welcome'){
            root.appendChild(welcomePage());
