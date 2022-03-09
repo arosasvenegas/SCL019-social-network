@@ -10,13 +10,22 @@ export function registerMe() {
   window.location.hash = '/register';
 
   const root = document.getElementById('root');
-  root.innerHTML = `<h4>Crear Cuenta</h4>
-    <input id="name" placeholder="Nombre de usuario">
-    <input id="email" type="email" placeholder="Ingresa tu Email">
-    <input id="password" type="password" placeholder="Ingresa tu contraseña"><br>
-    <button id="btnRegister">Registrarme</button>
-    <button id="btnGoogle"> Usar cuenta de google Google</button>`;
+  root.innerHTML = `<div class="containerRegister" id="containerRegister">
+    <h4 class="tittleRegisterMe">Crear Cuenta</h4>
+    <label class="labelRegisterMe">Nombre de usuario</label>
+    <input class="inputRegisterMe" id="name">
 
+    <label class="labelRegisterMe">Ingresa tu Email</label>
+    <input class="inputRegisterMe" id="email" type="email">
+
+    <label class="labelRegisterMe">Ingresa tu contraseña</label>
+    <input class="inputRegisterMe" id="password" type="password"><br>
+   
+    <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
+    <p class="txtGoogle">O</p> 
+    <button class="buttonRegisterMe" id="btnGoogle"> Usar cuenta de Google</button>
+    </div>`;
+    
   document.getElementById('btnRegister').addEventListener('click', register);
   document.getElementById('btnGoogle').addEventListener('click', registerGoogle);
 }
