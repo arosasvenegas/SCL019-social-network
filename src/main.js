@@ -6,16 +6,21 @@ import { router } from "./lib/router.js";
 
 
 
-const loadview =()=>{
-  document.getElementById('root').appendChild(welcomePage());
+window.addEventListener('load', () => {
+router(window.location.hash);
+});
+
+
   window.location.hash = '/welcome';
   window.addEventListener('hashchange', () =>{
-      
     router(window.location.hash);
-   });}
+  });
+      
+    
+  
  
 
- window.addEventListener('load', loadview() );
+ 
 
 
  document.getElementById('btnRegister').addEventListener('click', registerMe);

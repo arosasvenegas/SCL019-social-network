@@ -3,6 +3,7 @@ import { registerMe } from "./register.js";
 
 
 export function welcomePage () {
+  window.location.hash = '#/welcome';
   
  const welcome =document.createElement('div');
                  

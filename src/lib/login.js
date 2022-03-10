@@ -6,7 +6,7 @@ import { registerGoogle } from "../lib/register.js";
 // // ___________________REGISTRARSE___________________
 // Función que muestra formulario de registro
 export function loginMe() {
-    window.location.hash = '/login';
+    window.location.hash = '#/login';
   
    const root = document.getElementById('root');
     root.innerHTML = ` <div class="containerLogin" id="containerLogin"> 

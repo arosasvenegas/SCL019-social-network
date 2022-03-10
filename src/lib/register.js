@@ -8,7 +8,7 @@ import { login } from "./login.js";
 // Función que muestra formulario de registro
 export function registerMe() {
 
-  window.location.hash = '/register';
+  window.location.hash = '#/register';
 
   const root = document.getElementById('root');
   root.innerHTML = `<div class="containerRegister" id="containerRegister">
@@ -22,7 +22,7 @@ export function registerMe() {
 
     <label class="labelRegisterMe">Ingresa tu contraseña</label>
     <input class="inputRegisterMe" id="password" type="password"><br>
-    <p id="mensajeError" class="mensajeError" style="color:black;"> </p>
+    <p id="mensajeErrorR" class="mensajeErrorR" style="color:black;"> </p>
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
     <p class="txtGoogle">O registrar con</p> 
@@ -59,15 +59,15 @@ export function register() {
     // ..
    
     if(errorCode === 'auth/invalid-email'){
-      root.querySelector("#mensajeError").innerHTML = "Email Invalido";
+      root.querySelector("#mensajeErrorR").innerHTML = "Email Invalido";
     }else if(errorCode === 'auth/invalid-email'){
-      root.querySelector("#mensajeError").innerHTML = "Email Invalido";
+      root.querySelector("#mensajeErrorR").innerHTML = "Email Invalido";
     } else if(errorCode === 'auth/missing-email'){
-      root.querySelector("#mensajeError").innerHTML = "Ingresar Email";
+      root.querySelector("#mensajeErrorR").innerHTML = "Ingresar Email";
      } else if(errorCode === 'auth/internal-error'){
-      root.querySelector("#mensajeError").innerHTML = "Rellene todos los campos";
+      root.querySelector("#mensajeErrorR").innerHTML = "Rellene todos los campos";
      } else if(errorCode === 'auth/weak-password'){
-      root.querySelector("#mensajeError").innerHTML = "La contraseña debe tener mas 6 caracteres";
+      root.querySelector("#mensajeErrorR").innerHTML = "La contraseña debe tener mas 6 caracteres";
     }
     
 });
