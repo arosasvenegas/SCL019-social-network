@@ -22,7 +22,7 @@ export function registerMe() {
 
     <label class="labelRegisterMe">Ingresa tu contraseña</label>
     <input class="inputRegisterMe" id="password" type="password"><br>
-    <p class="mensajeError" style="color:black;"> </p>
+    <p id="mensajeError" class="mensajeError" style="color:black;"> </p>
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
     <p class="txtGoogle">O registrar con</p> 
@@ -51,13 +51,24 @@ export function register() {
     console.log(user);
     root.querySelector(".mensajeError").innerHTML= '';
     // ...
+    
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-    root.querySelector(".mensajeError").innerHTML = errorMessage;
-    console.log(errorCode);
+   
+    if(errorCode === 'auth/invalid-email'){
+      root.querySelector("#mensajeError").innerHTML = "Email Invalido";
+    }else if(errorCode === 'auth/invalid-email'){
+      root.querySelector("#mensajeError").innerHTML = "Email Invalido";
+    } else if(errorCode === 'auth/missing-email'){
+      root.querySelector("#mensajeError").innerHTML = "Ingresar Email";
+     } else if(errorCode === 'auth/internal-error'){
+      root.querySelector("#mensajeError").innerHTML = "Rellene todos los campos";
+     } else if(errorCode === 'auth/weak-password'){
+      root.querySelector("#mensajeError").innerHTML = "La contraseña debe tener mas 6 caracteres";
+    }
     
 });
 }
