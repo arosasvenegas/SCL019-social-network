@@ -3,18 +3,18 @@ import { loginMe } from './login.js';
 import {registerMe} from "./register.js";
 
 
-export function router (){
+export const router = (hash) =>{
 
    const root = document.getElementById('root');
-   //root.innerHTML = '';
-  
-        if (window.location.hash === '/welcome'){
+   root.innerHTML = "";
+   if (hash === "#/welcome" || hash === "#" || hash === ""){
+
+    root.appendChild(welcomePage());
+   } else if (window.location.hash === '#/welcome'){
            root.appendChild(welcomePage());
-        }
-        if (window.location.hash === '/login'){
+        } else if (window.location.hash === '#/login'){
             root.appendChild(loginMe());
-        }
-        if (window.location.hash === '/register'){
+        } else if (window.location.hash === '#/register'){
             root.appendChild(registerMe());
         }
     
