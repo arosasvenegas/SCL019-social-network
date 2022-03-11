@@ -15,15 +15,16 @@ export function loginMe() {
     <img src="/imagenes/logo-lucchi.png" id="logoLogin">
     <label class="labelLoginMe">Ingresa tu Email</label>
     <input class="inputLoginMe" id="email" type="email">
-
     <label class="labelLoginMe">Ingresa tu contraseña</label>
     <input class="inputLoginMe" id="password" type="password"><br>
-    <p  class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
+
+
+    <p class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
+
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
     <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
-
       </div>
       `;
       loginV.innerHTML=loginView
@@ -55,14 +56,14 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
     // Signed in
     const user = userCredential.user;
       console.log(user);
-     
-    // ...
+
+
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
   
-    
+
     if (errorCode === "auth/user-not-found"){
       root.querySelector("#mensajeErrorL").innerHTML = "usuario no regristrado";
       
@@ -78,3 +79,4 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
 
   });
 }
+

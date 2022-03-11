@@ -16,13 +16,3 @@ router(window.location.hash);
     router(window.location.hash);
   });
       
-    
-  
- 
-
- 
-
-
-//  document.getElementById('btnRegister').addEventListener('click', registerMe);
-//  document.getElementById('btnLogin').addEventListener('click', loginMe);
-
