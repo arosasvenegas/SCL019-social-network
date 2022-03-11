@@ -10,8 +10,9 @@ export function registerMe() {
 
   window.location.hash = '#/register';
 
-  const root = document.getElementById('root');
-  root.innerHTML = `<div class="containerRegister" id="containerRegister">
+  const registerV =document.createElement('div');
+  
+  const registerView = `<div class="containerRegister" id="containerRegister">
     
     <img src="/imagenes/logo-lucchi.png" id="logoRegister">
     <label class="labelRegisterMe">Nombre de usuario</label>
@@ -26,10 +27,25 @@ export function registerMe() {
     <p class="txtGoogle">O registrar con</p> 
     <button class="buttonRegisterGoogle" id="btnGoogle"> Usar cuenta de Google</button>
     </div>`;
+
+    registerV.innerHTML=registerView
     
-  document.getElementById('btnRegister').addEventListener('click', register);
-  document.getElementById('btnGoogle').addEventListener('click', registerGoogle);
-}
+  // document.getElementById('btnRegister').addEventListener('click', register);
+  // document.getElementById('btnGoogle').addEventListener('click', registerGoogle);
+
+  let btnRegisterV = registerV.querySelector('#btnRegister');
+  btnRegisterV.addEventListener('click', () => {
+    register();
+  });
+  
+    let btnGoogleR = registerV.querySelector('#btnGoogle');
+    btnGoogleR.addEventListener('click', () =>{
+      registerGoogle()
+    });
+  
+
+return registerV;
+};
 
 
 const auth = getAuth(app);
@@ -47,7 +63,7 @@ export function register() {
     const user = userCredential.user;
     check(alert('La cuenta se ha creado exitosamente'))
     console.log(user);
-    root.querySelector(".mensajeError").innerHTML= '';
+    
     // ...
     
   })

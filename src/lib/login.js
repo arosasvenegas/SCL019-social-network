@@ -16,7 +16,8 @@ export function loginMe() {
     <input class="inputLoginMe" id="email" type="email">
     <label class="labelLoginMe">Ingresa tu contraseña</label>
     <input class="inputLoginMe" id="password" type="password"><br>
-    <p class="mensajeError" style="color:black;""> </p>
+
+    <p class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
@@ -42,7 +43,7 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
     // Signed in
     const user = userCredential.user;
       console.log(user);
-      root.querySelector(".mensajeError").innerHTML = '';
+      
      
     // ...
   })
@@ -64,7 +65,7 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
       root.querySelector("#mensajeErrorL").innerHTML= "Ingrese contraseña";
     }
  
-    console.log(errorMessage);
+    
   });
 }
 

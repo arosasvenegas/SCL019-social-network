@@ -11,7 +11,7 @@ router(window.location.hash);
 });
 
 
-  window.location.hash = '/welcome';
+  window.location.hash = '#/welcome';
   window.addEventListener('hashchange', () =>{
     router(window.location.hash);
   });
@@ -19,5 +19,5 @@ router(window.location.hash);
     
 
 
- document.getElementById('btnRegister').addEventListener('click', registerMe);
- document.getElementById('btnLogin').addEventListener('click', loginMe);
+//  document.getElementById('btnRegister').addEventListener('click', registerMe);
+//  document.getElementById('btnLogin').addEventListener('click', loginMe);
