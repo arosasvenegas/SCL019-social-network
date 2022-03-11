@@ -12,7 +12,7 @@ export function welcomePage () {
           <button class="btn1 login" id="btnLogin" type="submit" >Iniciar Sesión</button> <br>
           <button class="btn2 register" id="btnRegister" type="submit">Registrarse</button>
           </div>
-        `
+        `;
         welcome.innerHTML=welcomeView
 
 let btnLogin = welcome.querySelector('#btnLogin');
@@ -28,4 +28,3 @@ btnLogin.addEventListener('click', () => {
         
 return welcome;
 };
-
