@@ -31,4 +31,3 @@ btnLogin.addEventListener('click', () => {
         
 return welcome;
 };
-

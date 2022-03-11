@@ -14,7 +14,6 @@ export function loginMe() {
     <img src="/imagenes/logo-lucchi.png" id="logoLogin">
     <label class="labelLoginMe">Ingresa tu Email</label>
     <input class="inputLoginMe" id="email" type="email">
-
     <label class="labelLoginMe">Ingresa tu contraseña</label>
     <input class="inputLoginMe" id="password" type="password"><br>
     <p class="mensajeError" style="color:black;""> </p>
@@ -22,7 +21,6 @@ export function loginMe() {
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
     <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
-
       </div>
       `;
   
@@ -52,7 +50,21 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
     const errorCode = error.code;
     const errorMessage = error.message;
   
-    root.querySelector(".mensajeError").innerHTML = errorMessage;
-    console.log(errorCode); 
+  
+    if (errorCode === "auth/user-not-found"){
+      root.querySelector("#mensajeErrorL").innerHTML = "usuario no regristrado";
+      
+    } else if (errorCode === "auth/wrong-password"){
+      root.querySelector("#mensajeErrorL").innerHTML = "Contraseña incorrecta";
+    }
+      else if (errorCode === "auth/invalid-email"){
+      root.querySelector("#mensajeErrorL").innerHTML= "Correo invalido";
+    }
+      else if (errorCode === "auth/internal-error"){
+      root.querySelector("#mensajeErrorL").innerHTML= "Ingrese contraseña";
+    }
+ 
+    console.log(errorMessage);
   });
 }
+
