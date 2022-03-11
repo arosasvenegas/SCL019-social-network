@@ -49,14 +49,12 @@ export function register() {
     const user = userCredential.user;
     check(alert('La cuenta se ha creado exitosamente'))
     console.log(user);
-    root.querySelector(".mensajeError").innerHTML= '';
-    // ...
     
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    // ..
+  
    
     if(errorCode === 'auth/invalid-email'){
       root.querySelector("#mensajeErrorR").innerHTML = "Email Invalido";

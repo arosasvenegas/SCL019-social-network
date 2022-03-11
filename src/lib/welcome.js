@@ -15,9 +15,6 @@ export function welcomePage () {
         `
         welcome.innerHTML=welcomeView
 
- //document.querySelector('.register').//addEventListener('click', registerMe);
- 
-//document.querySelector('.login').addEventListener('click', loginMe);
 let btnLogin = welcome.querySelector('#btnLogin');
 btnLogin.addEventListener('click', () => {
   loginMe();
