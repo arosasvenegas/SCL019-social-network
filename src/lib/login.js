@@ -7,9 +7,10 @@ import { registerGoogle } from "../lib/register.js";
 // Función que muestra formulario de registro
 export function loginMe() {
     window.location.hash = '#/login';
-  
-   const root = document.getElementById('root');
-    root.innerHTML = ` <div class="containerLogin" id="containerLogin"> 
+
+    const loginV =document.createElement('div');
+   
+    const loginView = ` <div class="containerLogin" id="containerLogin"> 
       
     <img src="/imagenes/logo-lucchi.png" id="logoLogin">
     <label class="labelLoginMe">Ingresa tu Email</label>
@@ -17,16 +18,28 @@ export function loginMe() {
     <label class="labelLoginMe">Ingresa tu contraseña</label>
     <input class="inputLoginMe" id="password" type="password"><br>
 
+
     <p class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
+
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
     <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
       </div>
       `;
+      loginV.innerHTML=loginView
   
-    document.getElementById('btnLogin').addEventListener('click', login);
-    document.getElementById('btnGoogleLogin').addEventListener('click', registerGoogle);
+    let btnLoginV = loginV.querySelector('#btnLogin');
+    btnLoginV.addEventListener('click', () => {
+    login();
+});
+    
+    let btnGoogleL = loginV.querySelector('#btnGoogleLogin');
+    btnGoogleL.addEventListener('click', () => {
+  registerGoogle();
+});
+
+    return loginV;
   }
   
 
@@ -43,15 +56,14 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
     // Signed in
     const user = userCredential.user;
       console.log(user);
-      
-     
-    // ...
+
+
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
   
-  
+
     if (errorCode === "auth/user-not-found"){
       root.querySelector("#mensajeErrorL").innerHTML = "usuario no regristrado";
       
@@ -64,8 +76,7 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
       else if (errorCode === "auth/internal-error"){
       root.querySelector("#mensajeErrorL").innerHTML= "Ingrese contraseña";
     }
- 
-    
+
   });
 }
 
