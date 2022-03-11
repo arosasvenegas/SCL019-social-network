@@ -1,4 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from "../Firebase.js";
 import { registerGoogle } from "../lib/register.js";
@@ -9,15 +8,14 @@ export function loginMe() {
     window.location.hash = '#/login';
 
     const loginV =document.createElement('div');
-   
-    const loginView = ` <div class="containerLogin" id="containerLogin"> 
+   const loginView = ` <div class="containerLogin" id="containerLogin"> 
       
     <img src="/imagenes/logo-lucchi.png" id="logoLogin">
     <label class="labelLoginMe">Ingresa tu Email</label>
     <input class="inputLoginMe" id="email" type="email">
-
     <label class="labelLoginMe">Ingresa tu contraseña</label>
     <input class="inputLoginMe" id="password" type="password"><br>
+    
     <p  class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
