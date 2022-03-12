@@ -13,19 +13,20 @@ export function registerMe() {
   const registerV =document.createElement('div');
   
   const registerView = `<div class="containerRegister" id="containerRegister">
-    
-    <img src="/imagenes/logo-lucchi.png" id="logoRegister">
-    <label class="labelRegisterMe">Nombre de usuario</label>
-    <input class="inputRegisterMe" id="name">
-    <label class="labelRegisterMe">Ingresa tu Email</label>
-    <input class="inputRegisterMe" id="email" type="email">
-    <label class="labelRegisterMe">Ingresa tu contraseña</label>
+     <div class="formRegister" id="formRegister">
+    <img src="/imagenes/logo-lucchi.png" id="logoRegister"><br>
+    <label class="labelRegisterMe">Nombre de usuario</label><br>
+    <input class="inputRegisterMe" id="name"><br>
+    <label class="labelRegisterMe">Ingresa tu Email</label><br>
+    <input class="inputRegisterMe" id="email" type="email"><br>
+    <label class="labelRegisterMe">Ingresa tu contraseña</label><br>
     <input class="inputRegisterMe" id="password" type="password"><br>
-    <p id="mensajeErrorR" class="mensajeErrorR" style="color:black;"> </p>
+    <p id="mensajeErrorR" class="mensajeErrorR" style="color:black;"> </p> 
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
     <p class="txtGoogle">O registrar con</p> 
     <button class="buttonRegisterGoogle" id="btnGoogle"> Usar cuenta de Google</button>
+    </div>
     </div>`;
 
     registerV.innerHTML=registerView
