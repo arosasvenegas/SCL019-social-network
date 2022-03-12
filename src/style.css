@@ -1,12 +1,20 @@
+
+/* ------------------------------------------------------
+------------------vista movil-------------------------
+------------------------------------------------------ */
+@media screen and (min-width: 350px) {
 *{
     font-family: "Roboto", sans-serif;
     margin: 0;
+    
   }
 
+
+ 
   .containerWelcome{
     color: white;
-    width: 375px;
-    height: 667px;
+     /* width: 375px; */
+    height: 965px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,8 +79,12 @@
   .containerRegister {
     background-color: #febd81;
     color: #c16b55;
-    width: 375px;
-    height: 667px;
+    /* width: 375px;*/
+    height: 965px; 
+    
+  }
+
+  .formRegister{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,6 +93,7 @@
 
   #logoRegister{
     margin-bottom: 25px;
+    margin-top: 100px;
     width: 130px;
   }
 
@@ -153,8 +166,12 @@
 .containerLogin {
   background-color: rgba(246,91,85,1);
   color: #FED1A7;
-  width: 375px;
-  height: 667px;
+  /* width: 375px;*/
+  height: 965px; 
+  
+}
+
+.formlogin{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,6 +181,7 @@
 
 #logoLogin{
   margin-bottom: 40px;
+  margin-top: 200px;
   width: 130px;
 }
 
@@ -219,4 +237,84 @@
 .buttonLoginGoogle:hover {
   background-color: rgb(50, 27, 251);
   color: white;
+}
+
+}
+/* ------------------------------------------------------
+------------------vista TABLET-------------------------
+------------------------------------------------------ */
+
+
+
+@media only screen and (min-width: 768px) {
+
+  
+    .containerWelcome {
+      background-image: url("imagenes/fondowebWelcome.png");
+      background-size: cover;
+    }
+    
+
+    #logoWelcome{
+      margin-bottom: 100px;
+      
+      width: 380px;
+    }
+  
+    .btn1 {
+      width: 300px;
+      font-size: 20px;
+    }
+    
+    .btn2 {
+      width: 300px;
+      font-size: 20px;
+    }
+  
+
+    .containerRegister {
+      background-image: url("imagenes/fondoweb-register.png");
+      background-size: cover;
+    }
+  
+    .formRegister{
+      margin-right: 800px;
+    }
+
+    
+     .containerLogin {
+      background-image: url("imagenes/fondoweb-login.png");
+      background-size: cover;
+    } 
+  
+    .formlogin{
+      margin-right: 800px;
+    }
+
+
+}
+
+
+/* ------------------------------------------------------
+------------------vista WEB-------------------------
+------------------------------------------------------ */
+
+
+@media screen and (min-width: 1100px) {
+
+  .containerWelcome {
+    background-image: url("imagenes/fondowebWelcome.png");
+    background-size: cover;
+  }
+  .containerRegister {
+    background-image: url("imagenes/fondoweb-register.png");
+    background-size: cover;
+  }
+
+  .containerLogin {
+    background-image: url("imagenes/fondoweb-login.png");
+    background-size: cover;
+  }
+  
+  
 }

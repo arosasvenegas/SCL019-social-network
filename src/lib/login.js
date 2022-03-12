@@ -9,7 +9,7 @@ export function loginMe() {
 
     const loginV =document.createElement('div');
    const loginView = ` <div class="containerLogin" id="containerLogin"> 
-      
+    <div class="formlogin" id="formlogin">
     <img src="/imagenes/logo-lucchi.png" id="logoLogin">
     <label class="labelLoginMe">Ingresa tu Email</label>
     <input class="inputLoginMe" id="email" type="email">
@@ -23,7 +23,8 @@ export function loginMe() {
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
     <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
-      </div>
+    </div>  
+    </div>
       `;
       loginV.innerHTML=loginView
   
