@@ -12,8 +12,10 @@ export function registerMe() {
 
   const registerV =document.createElement('div');
   
+  
   const registerView = `<div class="containerRegister" id="containerRegister">
-     <div class="formRegister" id="formRegister">
+    <div class="formRegister" id="formRegister">
+    
     <img src="/imagenes/logo-lucchi.png" id="logoRegister"><br>
     <label class="labelRegisterMe">Nombre de usuario</label><br>
     <input class="inputRegisterMe" id="name"><br>
