@@ -20,6 +20,6 @@ export const router = (hash) =>{
         } else if (window.location.hash === '#/muro') {
             root.appendChild(muroPage());
     ;
-        // observer();
+       
 }
 }

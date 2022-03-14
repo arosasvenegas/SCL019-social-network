@@ -19,7 +19,7 @@ export function loginMe() {
     <input class="inputLoginMe" id="password" type="password"><br>
 
 
-    <p class="mensajeErrorL" id="mensajeErrorL" style="color:black;"> </p>
+    <p class="mensajeErrorL" id="mensajeErrorL" style="color:red;  font-size: 30px; font-weight: bold; -webkit-text-stroke: 0.5px ; text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;"> </p>
 
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>

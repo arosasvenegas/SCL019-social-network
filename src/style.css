@@ -31,11 +31,13 @@
     cursor: pointer;
     border-radius: 25px;
     margin-top: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .login {
     border-color: #ffffff;
     background: transparent;
+    
   }
 
   .login:hover {
@@ -50,6 +52,7 @@
     cursor: pointer;
     border-radius: 25px;
     margin-top: 18px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .register {
@@ -87,6 +90,7 @@
   .labelRegisterMe {
     margin-bottom: 5px;
   }
+
   .inputRegisterMe {
     border: none;
     background-color: white;
@@ -97,6 +101,7 @@
     margin-bottom: 25px;
     padding: 5px;
     justify-content: center;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .mensajeError {
@@ -118,6 +123,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .buttonRegisterMe:hover {
@@ -135,6 +141,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .buttonRegisterGoogle:hover {
@@ -176,6 +183,7 @@
     height: 33px;
     left: 31px;
     margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .buttonLoginMe {
@@ -188,6 +196,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .buttonLoginMe:hover {
@@ -205,6 +214,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   }
 
   .buttonLoginGoogle:hover {
@@ -224,7 +234,6 @@
 
   #logoWelcome {
     margin-bottom: 100px;
-
     width: 380px;
   }
 
@@ -238,6 +247,8 @@
     font-size: 20px;
   }
 
+  /*---------------------------------------------------------------------------------------*/
+
   .containerRegister {
     background-image: url("imagenes/fondoweb-register.png");
     background-size: cover;
@@ -247,6 +258,38 @@
     margin-right: 800px;
   }
 
+  
+  #logoRegister {
+    margin-top: 120px;
+    width: 180px;
+  }
+
+  .labelRegisterMe {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .inputRegisterMe {
+    width: 350px;
+    height: 50px;
+  }
+
+
+  .buttonRegisterMe {
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .buttonRegisterGoogle {
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  /*-----------------------------------------------------------------------------------------*/
+
   .containerLogin {
     background-image: url("imagenes/fondoweb-login.png");
     background-size: cover;
@@ -255,7 +298,39 @@
   .formlogin {
     margin-right: 800px;
   }
+
+  #logoLogin {
+    margin-top: 130px;
+    width: 200px;
+
+  }
+
+  .labelLoginMe {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .inputLoginMe {
+    width: 350px;
+    height: 50px;
+  }
+
+  .buttonLoginMe {
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+
+  .buttonLoginGoogle {
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
 }
+
 
 /* ------------------------------------------------------
 ------------------vista WEB-------------------------
