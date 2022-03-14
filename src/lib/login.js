@@ -1,6 +1,8 @@
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from "../Firebase.js";
 import { registerGoogle } from "../lib/register.js";
+import { muroPage } from "./muro.js";
+// import { welcomePage } from "./welcome.js";
 
 // // ___________________REGISTRARSE___________________
 // Función que muestra formulario de registro
@@ -78,4 +80,21 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
 
   });
 }
+
+
+
+export const observer = () => {
+onAuthStateChanged(auth, (user) => {
+  if ((user !== null || undefined) && user.emailVerified === true) {
+    
+    const uid = user.uid;
+    muroPage()
+
+  } else if (window.location.hash === '#/login'){
+    // User is signed out
+    loginMe()
+
+  }
+});
+};
 

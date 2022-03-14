@@ -15,7 +15,6 @@ export function registerMe() {
   
   const registerView = `<div class="containerRegister" id="containerRegister">
     <div class="formRegister" id="formRegister">
-    
     <img src="/imagenes/logo-lucchi.png" id="logoRegister"><br>
     <label class="labelRegisterMe">Nombre de usuario</label><br>
     <input class="inputRegisterMe" id="name"><br>
@@ -23,7 +22,7 @@ export function registerMe() {
     <input class="inputRegisterMe" id="email" type="email"><br>
     <label class="labelRegisterMe">Ingresa tu contraseña</label><br>
     <input class="inputRegisterMe" id="password" type="password"><br>
-    <p id="mensajeErrorR" class="mensajeErrorR" style="color:black;"> </p> 
+    <p id="mensajeErrorR" class="mensajeErrorR" style="color:black;"> </p>
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
     <p class="txtGoogle">O registrar con</p> 

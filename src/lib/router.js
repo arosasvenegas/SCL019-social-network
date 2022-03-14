@@ -1,6 +1,7 @@
 import{welcomePage} from './welcome.js';
 import { loginMe } from './login.js';
 import {registerMe} from "./register.js";
+import { muroPage } from "./muro.js";
 
 
 export const router = (hash) =>{
@@ -16,6 +17,9 @@ export const router = (hash) =>{
             root.appendChild(loginMe());
         } else if (window.location.hash === '#/register'){
             root.appendChild(registerMe());
-        }
-    
+        } else if (window.location.hash === '#/muro') {
+            root.appendChild(muroPage());
+    ;
+        // observer();
+}
 }
