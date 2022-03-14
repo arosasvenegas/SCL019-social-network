@@ -31,13 +31,12 @@
     cursor: pointer;
     border-radius: 25px;
     margin-top: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .login {
     border-color: #ffffff;
     background: transparent;
-    
   }
 
   .login:hover {
@@ -52,7 +51,7 @@
     cursor: pointer;
     border-radius: 25px;
     margin-top: 18px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .register {
@@ -101,7 +100,7 @@
     margin-bottom: 25px;
     padding: 5px;
     justify-content: center;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .mensajeError {
@@ -123,7 +122,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .buttonRegisterMe:hover {
@@ -141,7 +140,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .buttonRegisterGoogle:hover {
@@ -183,7 +182,7 @@
     height: 33px;
     left: 31px;
     margin-bottom: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .buttonLoginMe {
@@ -196,7 +195,7 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .buttonLoginMe:hover {
@@ -214,12 +213,56 @@
     background-color: white;
     color: #c16b55;
     margin-bottom: 25px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
   .buttonLoginGoogle:hover {
     background-color: rgb(50, 27, 251);
     color: white;
+  }
+  /*VISTA MURO*/
+  /*VISTA MURO*/
+  .encabezadoMuro {
+    background-color: rgb(246, 91, 85);
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  }
+  #logoMuro {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 60px;
+  }
+  .categoryHome {
+    margin: 20px;
+  }
+  .categoryFood,
+  .categoryclean,
+  .categoryVet,
+  .categoryGo,
+  .categoryPlay,
+  .categoryAcc {
+    width: 144px;
+    height: 160px;
+    margin: 10px;
+    background-color: rgba(254, 189, 129);
+    color: #c16b55;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  }
+  .logOut {
+    background-color: rgb(246, 91, 85);
+    color: #ffffff;
+    font-size: 16px;
+    width: 120px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 25px;
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+    margin-left: 35%;
   }
 }
 /* ------------------------------------------------------
@@ -247,7 +290,7 @@
     font-size: 20px;
   }
 
-  /*---------------------------------------------------------------------------------------*/
+  /*--------------------------------------REGISTER-------------------------------------------------*/
 
   .containerRegister {
     background-image: url("imagenes/fondoweb-register.png");
@@ -258,7 +301,6 @@
     margin-right: 800px;
   }
 
-  
   #logoRegister {
     margin-top: 120px;
     width: 180px;
@@ -274,7 +316,6 @@
     height: 50px;
   }
 
-
   .buttonRegisterMe {
     margin-top: 20px;
     width: 250px;
@@ -288,7 +329,7 @@
     font-size: 18px;
   }
 
-  /*-----------------------------------------------------------------------------------------*/
+  /*--------------------------------------LOGIN---------------------------------------------------*/
 
   .containerLogin {
     background-image: url("imagenes/fondoweb-login.png");
@@ -302,7 +343,6 @@
   #logoLogin {
     margin-top: 130px;
     width: 200px;
-
   }
 
   .labelLoginMe {
@@ -322,16 +362,35 @@
     font-size: 18px;
   }
 
-
   .buttonLoginGoogle {
     width: 250px;
     height: 50px;
     font-size: 18px;
   }
-  
+  /*---------------------------------MURO--------------------------------------------------------*/
+  .categoryFood,
+  .categoryclean,
+  .categoryVet,
+  .categoryGo,
+  .categoryPlay,
+  .categoryAcc {
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    font-size: 30px;
+  }
+  .logOut {
+    width: 180px;
+    height: 60px;
+    font-size: 25px;
+    margin-left: 40%;
+    position: absolute;
+    top: 80%;
+  }
+  .encabezadoMuro {
+    margin-bottom: 45px;
+  }
 }
-
-
 /* ------------------------------------------------------
 ------------------vista WEB-------------------------
 ------------------------------------------------------ */
@@ -349,5 +408,12 @@
   .containerLogin {
     background-image: url("imagenes/fondoweb-login.png");
     background-size: cover;
+  }
+  /*MURO*/
+  .categories,
+  .petType {
+    width: 250px;
+    height: 70px;
+    margin-left: 280px;
   }
 }
