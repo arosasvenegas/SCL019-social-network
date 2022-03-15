@@ -236,11 +236,9 @@
   .categoryHome {
     margin: 20px;
   }
-  
   .categoryFood,
   .categoryclean,
   .categoryVet,
-  .categoryGo,
   .categoryGo,
   .categoryPlay,
   .categoryAcc {
@@ -254,29 +252,28 @@
     font-size: 20px;
     box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
     -moz-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.1s;
+    -webkit-transition: 0.3s;
+    transition: 0.1s;
   }
 
-  .categoryFood:hover{
+  .categoryFood:hover {
     transform: scale(1.2);
- }
-  .categoryclean:hover{
+  }
+  .categoryclean:hover {
     transform: scale(1.2);
- }
-  .categoryVet:hover{
+  }
+  .categoryVet:hover {
     transform: scale(1.2);
- }
-  .categoryGo:hover{
+  }
+  .categoryGo:hover {
     transform: scale(1.2);
- }
-  .categoryPlay:hover{
+  }
+  .categoryPlay:hover {
     transform: scale(1.2);
- }
-  .categoryAcc:hover{
+  }
+  .categoryAcc:hover {
     transform: scale(1.2);
- }
-
+  }
   .logOut {
     background-color: rgb(246, 91, 85);
     color: #ffffff;
@@ -288,6 +285,11 @@
     margin-bottom: 25px;
     box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
     margin-left: 35%;
+  }
+  .logOut:hover {
+    background-color: rgba(254, 189, 129);
+    color: #ffffff;
+    border: 5px #c16b55;
   }
 }
 /* ------------------------------------------------------
@@ -323,7 +325,10 @@
   }
 
   .formRegister {
-    margin-right: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #logoRegister {
@@ -362,7 +367,10 @@
   }
 
   .formlogin {
-    margin-right: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #logoLogin {
@@ -429,11 +437,24 @@
     background-image: url("imagenes/fondoweb-register.png");
     background-size: cover;
   }
+  .formRegister {
+    margin-right: 800px;
+  }
+  #logoRegister {
+    margin-top: 20px;
+  }
 
   .containerLogin {
     background-image: url("imagenes/fondoweb-login.png");
     background-size: cover;
   }
+  .formlogin {
+    margin-right: 800px;
+  }
+  #logoLogin {
+    margin-top: 80px;
+  }
+
   /*MURO*/
   .categories,
   .petType {
