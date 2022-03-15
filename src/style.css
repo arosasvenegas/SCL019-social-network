@@ -407,17 +407,17 @@
   .categoryGo,
   .categoryPlay,
   .categoryAcc {
-    width: 200px;
-    height: 250px;
-    margin: 25px;
-    font-size: 30px;
+    width: 195px;
+    height: 245px;
+    margin: 20px;
+    font-size: 28px;
   }
   .logOut {
     width: 180px;
     height: 60px;
     font-size: 25px;
     margin-left: 40%;
-    position: absolute;
+
     top: 80%;
   }
   .encabezadoMuro {
