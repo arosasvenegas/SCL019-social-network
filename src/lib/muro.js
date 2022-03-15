@@ -1,6 +1,6 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from "../Firebase.js";
-import { food } from "./alimento.js";
+import { food } from './alimento.js';
 
 export function muroPage() {
 
@@ -52,7 +52,7 @@ export function muroPage() {
   // cerrar sesion
 function logOut() {
     signOut(auth).then(() => {
-      alert("Usted esta cerrando sesion✌🏻");
+      alert("Usted esta cerrando sesión, tome awita ✌🏻");
       window.location.hash = '#/welcome';
     }).catch((error) => {
     

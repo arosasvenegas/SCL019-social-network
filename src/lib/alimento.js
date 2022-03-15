@@ -1,3 +1,4 @@
+
 export function food(){
     window.location.hash='#/alimentacion';
     const foodV = document.createElement('div');
