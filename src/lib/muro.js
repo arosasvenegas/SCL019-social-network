@@ -15,12 +15,12 @@ export function muroPage() {
      </header>
 
      <section class="categoryHome" id="categoryHome">
-     <button class="categoryFood" id="btnfood">Alimentacion</button>
-     <button class="categoryclean" id="categoryclean">Higine</button>
-     <button class="categoryVet" id="categoryVet">Veterinario</button>
-     <button class="categoryGo" id="categoryGo">Paseo</button>
-     <button class="categoryPlay" id="categoryPlay">Juegos</button>
-     <button class="categoryAcc" id="categoryAcc">Accesorios</button>
+     <button class="categoryFood" id="btnfood"> <i class="fa-solid fa-paw"></i> <br> Alimentacion</button>
+     <button class="categoryclean" id="categoryclean"> <i class="fa-solid fa-paw"></i><br> Higine</button>
+     <button class="categoryVet" id="categoryVet"> <i class="fa-solid fa-paw"></i> <br>Veterinario</button>
+     <button class="categoryGo" id="categoryGo"> <i class="fa-solid fa-paw"></i><br>Paseo</button>
+     <button class="categoryPlay" id="categoryPlay"> <i class="fa-solid fa-paw"></i> <br>Juegos</button>
+     <button class="categoryAcc" id="categoryAcc"> <i class="fa-solid fa-paw"></i> <br>Accesorios</button>
      </section>
 
       
