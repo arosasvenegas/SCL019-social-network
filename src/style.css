@@ -230,8 +230,14 @@
     margin-top: 15px;
     margin-left: 15px;
     margin-bottom: 15px;
-    width: 100px;
-    height: 60px;
+    width: 130px;
+    /* height: 60px; */
+  }
+
+  .categoryHome{
+   margin-top: 20px;
+   margin-left: 20px;
+   justify-content: space-between;
   }
 
   .categoryFood,
@@ -276,20 +282,52 @@
     background-color: rgba(254, 189, 129);
     color: #ffffff;
     float: right;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 20px;
-    font-size: 17px;
-    width: 120px;
-    height: 48px;
+    font-size: 13px;
+    width: 100px;
+    height: 35px;
     border-radius: 15px;
     border: none;
-    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   }
   .logOut:hover {
     background-color: rgb(246, 91, 85);
     color: #ffffff;
     border: 3px solid rgba(254, 189, 129);
   }
+
+  /* .mainPost{
+
+    display: flex;
+    
+  } */
+
+  .containerPost{
+    background-color: rgb(221, 221, 221);
+    height: 700px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+
+  .post1,
+  .post2,
+  .post3,
+  .post4{
+    background-color: white;
+    width: auto;
+    height: 45px;
+    margin-top: 18px;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+  }
+
   .newPost {
     position: absolute;
     right: 45%;
@@ -418,6 +456,24 @@
     font-size: 18px;
   }
   /*---------------------------------MURO--------------------------------------------------------*/
+ 
+  #logoMuro {
+    width: 170px;
+  }
+ 
+.categoryHome{
+   flex: 0 1 250px;
+}
+
+.containerPost{
+  flex: 1 0 auto;
+}
+
+  .mainPost{
+    display: flex;
+    flex-direction: row;
+  }
+
   .categoryFood,
   .categoryclean,
   .categoryVet,
@@ -428,13 +484,12 @@
     height: 80px;
     margin: 15px;
     margin-left: 30px;
-    font-size: 30px;
+    font-size: 20px;
   }
   .logOut {
-    width: 180px;
-    height: 60px;
-    font-size: 25px;
+    margin-top: 20px;
   }
+
   .newPost {
     width: 60px;
     height: 60px;
@@ -474,6 +529,11 @@
   }
 
   /*MURO*/
+
+  #logoMuro {
+    width: 200px;
+  }
+
   .categoryFood,
   .categoryclean,
   .categoryVet,

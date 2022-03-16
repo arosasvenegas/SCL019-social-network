@@ -2,7 +2,7 @@ import { getAuth, signInWithEmailAndPassword,onAuthStateChanged} from "https://w
 import { app } from "../Firebase.js";
 import { registerGoogle } from "../lib/register.js";
 import { muroPage } from "./muro.js";
-// import { welcomePage } from "./welcome.js";
+
 
 // // ___________________REGISTRARSE___________________
 // Función que muestra formulario de registro
@@ -86,7 +86,7 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
 export const observer = () => {
 onAuthStateChanged(auth, (user) => {
   if ((user !== null || undefined) && user.emailVerified === true) {
-    
+
     const uid = user.uid;
     muroPage()
 
@@ -97,4 +97,3 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 };
-

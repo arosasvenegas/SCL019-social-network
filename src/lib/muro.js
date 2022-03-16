@@ -11,10 +11,10 @@ export function muroPage() {
     
     const muroView = `<div class="containerMuro" id="containerMuro">
      <header class="encabezadoMuro" id="encabezadoMuro">
-      <img src="/imagenes/logo-lucchi.png" id="logoMuro" class="logoMuro">
+      <img src="/imagenes/logo-lucchi-H.png" id="logoMuro" class="logoMuro">
       <button class="logOut" id="btnLogOut">Cerrar Sesión</button>
      </header>
-
+     <div class="mainPost" id="mainPost">
      <section class="categoryHome" id="categoryHome">
      <button class="categoryFood" id="btnfood"> <i class="fa-solid fa-paw"></i> <br> Alimentacion</button>
      <button class="categoryclean" id="categoryclean"> <i class="fa-solid fa-paw"></i><br> Higine</button>
@@ -24,6 +24,21 @@ export function muroPage() {
      <button class="categoryAcc" id="categoryAcc"> <i class="fa-solid fa-paw"></i> <br>Accesorios</button>
      </section>
 
+     <section class="containerPost" id="containerPost">
+     <div class="post1" id="post1">
+     <p>Publicación</p>
+     </div>
+     <div class="post2" id="post2">
+     <p>Publicación</p>
+     </div>
+     <div class="post3" id="post3">
+     <p>Publicación</p>
+     </div>
+     <div class="post4" id="post4">
+     <p>Publicación</p>
+     </div>
+     </section>
+     </div>
       
       <button class="newPost" id="newPost">+</button>
       
