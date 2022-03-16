@@ -1,6 +1,6 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from "../Firebase.js";
-import { food } from './alimento.js';
+
 
 export function muroPage() {
 
@@ -12,6 +12,7 @@ export function muroPage() {
     const muroView = `<div class="containerMuro" id="containerMuro">
      <header class="encabezadoMuro" id="encabezadoMuro">
       <img src="/imagenes/logo-lucchi.png" id="logoMuro" class="logoMuro">
+      <button class="logOut" id="btnLogOut">Cerrar Sesión</button>
      </header>
 
      <section class="categoryHome" id="categoryHome">
@@ -24,17 +25,14 @@ export function muroPage() {
      </section>
 
       
-      <button class="logOut" id="btnLogOut">cerrar sesión</button>
+      <button class="newPost" id="newPost">+</button>
       
       </div>`;
   
      muroV.innerHTML=muroView
 
 
-    let btnComida = muroV.querySelector('#btnfood');
-    btnComida.addEventListener('click', () => {
-         food();
-      });
+    
   
     let btnSalirV = muroV.querySelector('#btnLogOut');
     btnSalirV.addEventListener('click', () => {
