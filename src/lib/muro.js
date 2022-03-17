@@ -37,20 +37,9 @@ export function muroPage() {
 
       </form>
 
-      <div id="containerTask"></div>
-
-     <div class="post1" id="post1">
-     <p>Publicación</p>
-     </div>
-     <div class="post2" id="post2">
-     <p>Publicación</p>
-     </div>
-     <div class="post3" id="post3">
-     <p>Publicación</p>
-     </div>
-     <div class="post4" id="post4">
-     <p>Publicación</p>
-     </div>
+      <div class="containerTask" id="containerTask"></div>
+     
+     
      </section>
      </div>
       
@@ -82,7 +71,7 @@ export function muroPage() {
           querySnapshot.forEach(doc => {
             const task = doc.data()
             html += `
-            <div>
+            <div class="post1">
               <h3>${task.titulo}</h3>
               <p>${task.descripcion}</p>
 
@@ -105,7 +94,7 @@ export function muroPage() {
           querySnapshot.forEach(doc => {
             const task = doc.data()
             html += `
-            <div>
+            <div class="post1">
               <h3>${task.titulo}</h3>
               <p>${task.descripcion}</p>
 
@@ -119,8 +108,6 @@ export function muroPage() {
      
      
   
-            
-  
     let btnSalirV = muroV.querySelector('#btnLogOut');
     btnSalirV.addEventListener('click', () => {
       logOut();
@@ -131,8 +118,9 @@ export function muroPage() {
   };
 
 
-
   const auth = getAuth(app);
+
+
   // cerrar sesion
 function logOut() {
     signOut(auth).then(() => {
