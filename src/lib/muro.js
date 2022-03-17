@@ -1,5 +1,5 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app } from "../Firebase.js";
+import { app, guardarTask} from "../firebase.js";
 
 
 export function muroPage() {
@@ -25,6 +25,20 @@ export function muroPage() {
      </section>
 
      <section class="containerPost" id="containerPost">
+
+     <form id="task-form">
+      <label for="title"> Titulo: </label>
+      <input type="text" placeholder="title" id="task-title">
+
+      <label for="title"> Descripción: </label>
+      <input type="text" placeholder="descripcion" id="task-description">
+
+      <button id="btnTask"> guardar </button>
+
+      </form>
+
+      <div id="containerTask"></div>
+
      <div class="post1" id="post1">
      <p>Publicación</p>
      </div>
@@ -46,7 +60,17 @@ export function muroPage() {
   
      muroV.innerHTML=muroView
 
+     let formulario = muroV.querySelector('#task-form');
+     formulario.addEventListener('submit', (e) => {
+       e.preventDefault()
 
+       const titulo = formulario["task-title"]
+       const descripcion = formulario["task-description"]
+
+       guardarTask(titulo.value , descripcion.value);
+       formulario.reset();
+     });
+ 
     
   
     let btnSalirV = muroV.querySelector('#btnLogOut');
@@ -54,7 +78,6 @@ export function muroPage() {
       logOut();
     });
 
-    
   
   return muroV;
   };
