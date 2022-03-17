@@ -1,5 +1,5 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app, guardarTask} from "../firebase.js";
+import { app, guardarTask, mostrarTask} from "../firebase.js";
 
 
 export function muroPage() {
@@ -60,6 +60,8 @@ export function muroPage() {
   
      muroV.innerHTML=muroView
 
+    
+
      let formulario = muroV.querySelector('#task-form');
      formulario.addEventListener('submit', (e) => {
        e.preventDefault()
@@ -69,8 +71,32 @@ export function muroPage() {
 
        guardarTask(titulo.value , descripcion.value);
        formulario.reset();
+
+       
      });
- 
+     const containerPost = muroV.querySelector('#containerTask')
+    
+
+     async function mostrarPost(){
+      const querySnapshot = await mostrarTask()
+
+        let html = ''
+
+          querySnapshot.forEach(doc => {
+            const task = doc.data()
+            html += `
+            <div>
+              <h3>${task.titulo}</h3>
+              <p>${task.descripcion}</p>
+
+            </div>
+            `
+            console.log(doc.data())
+          });
+          containerPost.innerHTML = html
+     }
+     mostrarPost()
+  
     
   
     let btnSalirV = muroV.querySelector('#btnLogOut');
