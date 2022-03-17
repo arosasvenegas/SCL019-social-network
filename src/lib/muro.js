@@ -1,5 +1,5 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app, guardarTask, mostrarTask} from "../firebase.js";
+import { app, db, guardarTask, mostrarTask, onSnapshot, collection} from "../firebase.js";
 
 
 export function muroPage() {
@@ -75,12 +75,9 @@ export function muroPage() {
        
      });
      const containerPost = muroV.querySelector('#containerTask')
-    
-
      async function mostrarPost(){
       const querySnapshot = await mostrarTask()
-
-        let html = ''
+      let html = ''
 
           querySnapshot.forEach(doc => {
             const task = doc.data()
@@ -94,10 +91,35 @@ export function muroPage() {
             console.log(doc.data())
           });
           containerPost.innerHTML = html
-     }
-     mostrarPost()
+        }
+
+          mostrarPost()
+
+       
+          let btnSend = muroV.querySelector('#btnTask');
+          btnSend.addEventListener('click', () => {
+            
+            onSnapshot(collection(db, "publicaciones"), (querySnapshot) =>{
+                let html = ''
+
+          querySnapshot.forEach(doc => {
+            const task = doc.data()
+            html += `
+            <div>
+              <h3>${task.titulo}</h3>
+              <p>${task.descripcion}</p>
+
+            </div>
+            `
+            console.log(doc.data())
+          });
+           containerPost.innerHTML = html
+            })
+          })
+     
+     
   
-    
+            
   
     let btnSalirV = muroV.querySelector('#btnLogOut');
     btnSalirV.addEventListener('click', () => {
@@ -120,6 +142,6 @@ function logOut() {
     
     });
   };
-  
+   
 
   
