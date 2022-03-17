@@ -1,5 +1,5 @@
 import { initializeApp} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-import {getFirestore,collection,addDoc, getDocs, doc, onSnapshot} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+import {getFirestore,collection,addDoc, getDocs, onSnapshot} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDXN7gn69XolJlFkcHABqy-sqopSIZi4cY",
@@ -17,8 +17,8 @@ export const firebaseConfig = {
     addDoc(collection(db,"publicaciones"),{titulo,descripcion});
 
     export const mostrarTask = () => getDocs(collection(db, 'publicaciones'))
-    
-    const unsub = onSnapshot(doc(db, "cities", "SF"), (doc) => {
-  const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-  console.log(source, " data: ", doc.data());
-});
+
+    export const onGetTask = () => console.log('onGetTask')
+
+   
+export{onSnapshot, collection}
