@@ -26,7 +26,7 @@ export function registerMe() {
    
     <button class="buttonRegisterMe" id="btnRegister">Registrarme</button>
     <p class="txtGoogle">O registrar con</p> 
-    <button class="buttonRegisterGoogle" id="btnGoogle"> Usar cuenta de Google</button>
+    <button class="buttonRegisterGoogle" id="btnGoogle"> <i class="fa-brands fa-google"></i> Google</button>
     </div>
     </div>`;
 
