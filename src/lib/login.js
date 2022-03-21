@@ -24,7 +24,7 @@ export function loginMe() {
    
     <button class="buttonLoginMe" id="btnLogin">Iniciar sesión</button>
     <p class="txtGoogle">O iniciar sesión con</p> 
-    <button class="buttonLoginGoogle" id="btnGoogleLogin">  Google</button>
+    <button class="buttonLoginGoogle" id="btnGoogleLogin"><i class="fa-brands fa-google"></i> Google</button>
     </div>  
     </div>
       `;

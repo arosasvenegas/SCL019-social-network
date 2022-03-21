@@ -1,5 +1,5 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app, db, guardarTask, mostrarTask, onSnapshot, collection} from "../firebase.js";
+import { app, guardarTask, mostrarTask, onGetTask, deletePost, editPost, updatePost} from "../firebase.js";
 
 
 export function muroPage() {
@@ -12,7 +12,7 @@ export function muroPage() {
     const muroView = `<div class="containerMuro" id="containerMuro">
      <header class="encabezadoMuro" id="encabezadoMuro">
       <img src="/imagenes/logo-lucchi-H.png" id="logoMuro" class="logoMuro">
-      <button class="logOut" id="btnLogOut">Cerrar Sesión</button>
+      <button class="logOut" id="btnLogOut"><i class="fa-solid fa-power-off"></i> </button>
      </header>
      <div class="mainPost" id="mainPost">
      <section class="categoryHome" id="categoryHome">
@@ -26,86 +26,119 @@ export function muroPage() {
 
      <section class="containerPost" id="containerPost">
 
-     <form id="task-form">
+     <form id="task-form" class="task-form">
       <label for="title"> Titulo: </label>
-      <input type="text" placeholder="title" id="task-title">
-
+      <input type="text" class="taskTittle" id="task-title">
+      
+      
+      <br>
       <label for="title"> Descripción: </label>
-      <input type="text" placeholder="descripcion" id="task-description">
-
-      <button id="btnTask"> guardar </button>
+      <textarea class="taskDescription" id="task-description" cols="30" rows="6"></textarea>
+      <br>
+    
+      
+      <button id="btnTask" class="btnTask"> Postear </button>
 
       </form>
 
       <div class="containerTask" id="containerTask"></div>
-     
-     
+    
+      <div >
+        <h3></h3>
+        <p></p>
+     </div>
+
      </section>
      </div>
       
-      <button class="newPost" id="newPost">+</button>
+      
       
       </div>`;
   
      muroV.innerHTML=muroView
 
-    
+    let editStatus = false;
+    let id = '';
 
-     let formulario = muroV.querySelector('#task-form');
-     formulario.addEventListener('submit', (e) => {
-       e.preventDefault()
+       /* fUNCION PARA MOSTRAR POST EN TIEMPO REAL */
+      const containerPost = muroV.querySelector('#containerTask')
 
-       const titulo = formulario["task-title"]
-       const descripcion = formulario["task-description"]
+       async function mostrarPost(){
+          onGetTask ((querySnapshot) => {
+             let html = ''
 
-       guardarTask(titulo.value , descripcion.value);
-       formulario.reset();
-
-       
-     });
-     const containerPost = muroV.querySelector('#containerTask')
-     async function mostrarPost(){
-      const querySnapshot = await mostrarTask()
-      let html = ''
-
-          querySnapshot.forEach(doc => {
-            const task = doc.data()
+         querySnapshot.forEach(doc => {
+            const task = doc.data();
             html += `
-            <div class="post1">
-              <h3>${task.titulo}</h3>
-              <p>${task.descripcion}</p>
+              <div class="post1">
+                 <h3 class="titulo">${task.titulo}</h3>
+                 <i class="fa-solid fa-ellipsis"></i>
+                 <p class="comentario">${task.descripcion}</p>
+                 <button class="btnDelete" data-id="${doc.id}">Borrar</button>
+                 <button class="btnEdit" data-id="${doc.id}">Editar</button>
+                 <i class="fa-regular fa-heart"></i>
+              </div>
+            `;
+         });
+         containerPost.innerHTML = html;
 
-            </div>
-            `
-            console.log(doc.data())
-          });
-          containerPost.innerHTML = html
-        }
+         /*FUNCION BORRAR POST */ 
+         const btnsDelete = containerPost.querySelectorAll('.btnDelete')
+         btnsDelete.forEach(btn => {
+           btn.addEventListener('click', ({target: {dataset}}) => {
+              deletePost(dataset.id)
+           });
+         });
 
-          mostrarPost()
+         /*FUNCION PARE EDITAR POST */ 
+        
+         const btnsEdit = containerPost.querySelectorAll('.btnEdit')
+         btnsEdit.forEach((btn) => {
+           btn.addEventListener('click', async (e) =>{
+            const doc = await editPost(e.target.dataset.id)
+            const task = doc.data()
 
-       
-          let btnSend = muroV.querySelector('#btnTask');
-          btnSend.addEventListener('click', () => {
+            formulario["task-title"].value = task.titulo
+            formulario["task-description"].value = task.descripcion
+
             
-            onSnapshot(collection(db, "publicaciones"), (querySnapshot) =>{
-                let html = ''
+            editStatus = true;
+            id = doc.id;
 
-          querySnapshot.forEach(doc => {
-            const task = doc.data()
-            html += `
-            <div class="post1">
-              <h3>${task.titulo}</h3>
-              <p>${task.descripcion}</p>
+            formulario['btnTask'].innerText = 'update' 
+           });
+         });
 
-            </div>
-            `
-            console.log(doc.data())
-          });
-           containerPost.innerHTML = html
-            })
-          })
+         });
+
+       };
+
+      mostrarPost()
      
+
+      /* FUNCION PARA GUARDAR POST Y RESET FORMULARIO*/
+          let formulario = muroV.querySelector('#task-form');
+
+          formulario.addEventListener('submit', (e) => {
+            e.preventDefault()
+
+            const titulo = formulario["task-title"]
+            const descripcion = formulario["task-description"]
+
+            if (!editStatus){
+              guardarTask(titulo.value , descripcion.value);
+            } else {
+              updatePost(id,{
+                titulo: titulo.value, 
+                descripcion: descripcion.value,
+                });
+
+              editStatus = false;
+            }
+            
+            formulario.reset();
+          });
+         
      
   
     let btnSalirV = muroV.querySelector('#btnLogOut');
@@ -119,6 +152,7 @@ export function muroPage() {
 
 
   const auth = getAuth(app);
+
 
 
   // cerrar sesion
