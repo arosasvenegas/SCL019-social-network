@@ -292,13 +292,6 @@
     color: #ffffff;
     border: 2px solid rgba(254, 189, 129);
   }
-
-  /* .mainPost{
-
-    display: flex;
-    
-  } */
-
   .containerPost {
     background-color: rgb(221, 221, 221);
     height: 700px;
@@ -309,7 +302,7 @@
   }
   .task-form {
     background-color: white;
-    width: 240px;
+    width: 250px;
     height: 175px;
     margin-right: 40%;
     color: #4f5252;
@@ -325,14 +318,14 @@
     border: 2px solid rgba(254, 189, 129);
     margin-bottom: 10px;
   }
-  /*#menuBarras {
+  #menu {
     float: right;
     margin-right: 5px;
     margin-top: 4px;
     border: none;
-  }*/
+  }
   .taskDescription {
-    width: 230px;
+    width: 240px;
     height: 65px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -340,11 +333,12 @@
     border: 2px solid rgba(254, 189, 129);
     resize: none;
   }
-  /*#heart {
+  #heart {
     color: #de264c;
-    margin-left: 55%;
-    margin-top: 7px;
-  }*/
+    margin-right: 100px;
+    background-color: #ffffff;
+    border: none;
+  }
   .btnTask {
     width: 70px;
     height: 30px;
@@ -359,8 +353,8 @@
 
   .post1 {
     background-color: white;
-    width: auto;
-    height: auto;
+    width: 250px;
+    height: 200px;
     margin-top: 18px;
     border: none;
     border-radius: 15px;
@@ -374,19 +368,39 @@
   }
   .comentario {
     color: #4f5252;
+    width: 240px;
+    height: 100px;
     margin-bottom: 5px;
+    resize: none;
+    border: none;
   }
   .btnDelete,
   .btnEdit {
     width: 70px;
     height: 30px;
-    float: right;
+    margin: 5px;
     cursor: pointer;
-    margin-right: 4px;
     border-radius: 10px;
     border: none;
     background-color: rgba(254, 189, 129);
     color: #ffffff;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  #contador {
+    width: 15px;
+    border: none;
+    background-color: #ffffff;
+  }
+  .like {
+    display: flex;
+    align-items: baseline;
   }
 }
 /* ------------------------------------------------------
@@ -542,8 +556,13 @@
     width: 430px;
     height: 65px;
   }
-  #heart {
-    margin-left: 75%;
+  .post1 {
+    width: 440px;
+    height: 200px;
+  }
+  .comentario {
+    width: 420px;
+    height: 100px;
   }
 }
 /* ------------------------------------------------------
@@ -596,22 +615,29 @@
     font-size: 20px;
   }
   .task-form {
-    width: 1050px;
+    width: 1000px;
     height: 195px;
   }
   .taskTittle {
     width: 480px;
   }
   .taskDescription {
-    width: 1035px;
+    width: 950px;
     height: 90px;
   }
-  #heart {
-    margin-left: 86%;
+
+  .post1 {
+    width: 1000px;
+    height: 200px;
+  }
+  .comentario {
+    width: 980px;
+    height: 100px;
   }
   .btnTask {
     width: 100px;
     height: 35px;
+    margin-bottom: 15px;
     font-size: 18px;
     cursor: pointer;
     background-color: #ffffff;
@@ -620,5 +646,9 @@
   }
   .btnTask:hover {
     background-color: rgba(254, 189, 129);
+  }
+  .btnDelete,
+  .btnEdit {
+    float: right;
   }
 }
