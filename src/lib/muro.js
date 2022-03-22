@@ -33,7 +33,7 @@ export function muroPage() {
       
       <br>
       <label for="title"> Descripción: </label>
-      <textarea class="taskDescription" id="task-description" cols="30" rows="6"></textarea>
+      <textarea class="taskDescription" id="task-description" cols="15" rows="6"></textarea>
       <br>
     
       
@@ -57,6 +57,10 @@ export function muroPage() {
   
      muroV.innerHTML=muroView
 
+    
+    
+
+
     let editStatus = false;
     let id = '';
 
@@ -71,16 +75,43 @@ export function muroPage() {
             const task = doc.data();
             html += `
               <div class="post1">
-                 <h3 class="titulo">${task.titulo}</h3>
+                 <h3 class="titulo">${task.titulo}</h3> 
                  <i class="fa-solid fa-ellipsis"></i>
-                 <p class="comentario">${task.descripcion}</p>
+                 <textarea class="comentario" readonly>${task.descripcion}</textarea>
+
+                 <div class="like">
+            
+                 <input class="contador" id="contador" type="number"  value="0" name="" readonly/>
+
+
+                 <button class="heart" id="heart"><i class="fa-regular fa-heart"></i></button> 
                  <button class="btnDelete" data-id="${doc.id}">Borrar</button>
                  <button class="btnEdit" data-id="${doc.id}">Editar</button>
-                 <i class="fa-regular fa-heart"></i>
+                 </div>
+
               </div>
             `;
          });
          containerPost.innerHTML = html;
+
+         let likebtn= containerPost.querySelector("#heart");
+  let contador= containerPost.querySelector("#contador");
+
+  likebtn.addEventListener("click",()=>{
+    contador.value= parseInt(contador.value)+1;
+    contador.style.color= "#de264c";
+  })
+
+
+          //const likebtn= muroV.querySelectorAll("#heart");
+    //const contador= muroV.querySelectorAll("#contador");
+     ////likebtn.forEach(btn =>{
+      //btn.addEventListener("click",() => {
+      //contador.value= parseInt(contador.value)+1;
+      //contador.style.color= "#de264c";
+    //})
+     //})
+
 
          /*FUNCION BORRAR POST */ 
          const btnsDelete = containerPost.querySelectorAll('.btnDelete')
@@ -124,6 +155,7 @@ export function muroPage() {
 
             const titulo = formulario["task-title"]
             const descripcion = formulario["task-description"]
+           
 
             if (!editStatus){
               guardarTask(titulo.value , descripcion.value);
@@ -164,6 +196,7 @@ function logOut() {
     
     });
   };
+  
    
 
   
