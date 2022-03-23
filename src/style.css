@@ -299,6 +299,7 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 20px;
+    overflow: scroll;
   }
   .task-form {
     background-color: white;
@@ -335,7 +336,7 @@
   }
   #heart {
     color: #de264c;
-    margin-right: 100px;
+    margin-right: 20px;
     background-color: #ffffff;
     border: none;
   }
@@ -398,9 +399,10 @@
     border: none;
     background-color: #ffffff;
   }
-  .like {
+  .btnsPost {
     display: flex;
     align-items: baseline;
+    float: right;
   }
 }
 /* ------------------------------------------------------
@@ -646,9 +648,5 @@
   }
   .btnTask:hover {
     background-color: rgba(254, 189, 129);
-  }
-  .btnDelete,
-  .btnEdit {
-    float: right;
   }
 }

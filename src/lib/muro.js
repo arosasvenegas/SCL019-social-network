@@ -1,5 +1,6 @@
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app, guardarTask, mostrarTask, onGetTask, deletePost, editPost, updatePost} from "../firebase.js";
+import { app, guardarTask, deletePost, editPost, updatePost, db} from "../firebase.js";
+import {onSnapshot,query, orderBy, collection} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
 
 export function muroPage() {
@@ -68,7 +69,8 @@ export function muroPage() {
       const containerPost = muroV.querySelector('#containerTask')
 
        async function mostrarPost(){
-          onGetTask ((querySnapshot) => {
+         const q = query(collection(db, "publicaciones"), orderBy("date","desc"));
+          onSnapshot (q, (querySnapshot) => {
              let html = ''
 
          querySnapshot.forEach(doc => {
@@ -79,12 +81,12 @@ export function muroPage() {
                  <i class="fa-solid fa-ellipsis"></i>
                  <textarea class="comentario" readonly>${task.descripcion}</textarea>
 
-                 <div class="like">
+                 <div class="btnsPost">
             
-                 <input class="contador" id="contador" type="number"  value="0" name="" readonly/>
+                 <input class="contador" id="contador" type="number"  value="0" name="" readonly /> 
 
 
-                 <button class="heart" id="heart"><i class="fa-regular fa-heart"></i></button> 
+                 <button class="heart" id="heart" ><i class="fa-regular fa-heart"></i></button> 
                  <button class="btnDelete" data-id="${doc.id}">Borrar</button>
                  <button class="btnEdit" data-id="${doc.id}">Editar</button>
                  </div>
@@ -94,34 +96,27 @@ export function muroPage() {
          });
          containerPost.innerHTML = html;
 
-         let likebtn= containerPost.querySelector("#heart");
-  let contador= containerPost.querySelector("#contador");
-
-  likebtn.addEventListener("click",()=>{
-    contador.value= parseInt(contador.value)+1;
-    contador.style.color= "#de264c";
+         /*BOTON PARA DAR LIKE */
+         const likebtn= containerPost.querySelectorAll(".heart");
+         likebtn.forEach((btn) => {
+         btn.addEventListener("click",() => {
+           const userId = auth.currentUser.uid;
+           likepost(like.value, userId)
+         })
+  
   })
 
-
-          //const likebtn= muroV.querySelectorAll("#heart");
-    //const contador= muroV.querySelectorAll("#contador");
-     ////likebtn.forEach(btn =>{
-      //btn.addEventListener("click",() => {
-      //contador.value= parseInt(contador.value)+1;
-      //contador.style.color= "#de264c";
-    //})
-     //})
-
-
-         /*FUNCION BORRAR POST */ 
+         /*BOTON PARA BORRAR POST */ 
          const btnsDelete = containerPost.querySelectorAll('.btnDelete')
          btnsDelete.forEach(btn => {
            btn.addEventListener('click', ({target: {dataset}}) => {
-              deletePost(dataset.id)
+             const confirmDelete = confirm ('Estas seguro que quieres eliminar este post?');
+             if (confirmDelete == true){deletePost(dataset.id)}
+              
            });
          });
 
-         /*FUNCION PARE EDITAR POST */ 
+         /*BOTON PARA EDITAR POST */ 
         
          const btnsEdit = containerPost.querySelectorAll('.btnEdit')
          btnsEdit.forEach((btn) => {

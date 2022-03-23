@@ -1,5 +1,7 @@
 import { initializeApp} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-import {getFirestore,collection,addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+import {getFirestore,collection,addDoc, getDocs, deleteDoc, doc, getDoc, updateDoc, arrayRemove, arrayUnion } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+import {getAuth} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDXN7gn69XolJlFkcHABqy-sqopSIZi4cY",
@@ -12,13 +14,26 @@ export const firebaseConfig = {
   
   export const app = initializeApp(firebaseConfig);
   export const db = getFirestore(app);
+  const auth = getAuth();
   
-  export const guardarTask= (titulo, descripcion) => 
-    addDoc(collection(db,"publicaciones"),{titulo,descripcion});
+  export const guardarTask= (titulo, descripcion) => {
+    const docRef = addDoc(collection(db,"publicaciones"),{
+      titulo:titulo,
+      descripcion:descripcion,
+      name: auth.currentUser.displayName,
+      email: auth.currentUser.email,
+      userId: auth.currentUser.uid,
+      like: [],
+      likeCounter: 0,
+      date: Date(Date.now()),
+
+
+    });
+    
+    return docRef
+  };
 
     export const mostrarTask = () => getDocs(collection(db, 'publicaciones'));
-
-    export const onGetTask = (callback) => onSnapshot(collection(db, "publicaciones"), callback);
 
     export const deletePost = (id) => deleteDoc(doc(db, "publicaciones", id));
 
@@ -26,9 +41,9 @@ export const firebaseConfig = {
 
     export const updatePost = (id, newFields) => updateDoc(doc(db, "publicaciones", id), newFields);
 
-   //xport const q = query(collection(db, "publicaciones"), orderBy("desc"));
-
    
+
+  //const likePost = () => updateDoc(doc(db, "publicaciones"))
 
 
    
