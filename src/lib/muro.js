@@ -78,6 +78,7 @@ export function muroPage() {
             const task = doc.data();
             html += `
               <div class="post1">
+               <h2 class="nombreUsuario"> ${task.name}</h2>
                  <h3 class="titulo">${task.titulo}</h3> 
                  <i class="fa-solid fa-ellipsis"></i>
                  <textarea class="comentario" readonly>${task.descripcion}</textarea>
@@ -120,6 +121,8 @@ export function muroPage() {
               
            });
          });
+
+
 
          /*BOTON PARA EDITAR POST */ 
         
