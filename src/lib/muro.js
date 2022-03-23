@@ -1,3 +1,4 @@
+
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app, guardarTask, deletePost, editPost, updatePost, db} from "../firebase.js";
 import {onSnapshot,query, orderBy, collection} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
@@ -194,4 +195,4 @@ function logOut() {
   
    
 
-  
+ 
