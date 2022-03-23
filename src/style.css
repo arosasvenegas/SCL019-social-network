@@ -399,7 +399,7 @@
     border: none;
     background-color: #ffffff;
   }
-  .like {
+  .btnsPost {
     display: flex;
     align-items: baseline;
     float: right;
@@ -648,9 +648,5 @@
   }
   .btnTask:hover {
     background-color: rgba(254, 189, 129);
-  }
-  .btnDelete,
-  .btnEdit {
-    float: right;
   }
 }

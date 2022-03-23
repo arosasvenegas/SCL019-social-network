@@ -50,7 +50,7 @@ return registerV;
 };
 
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 
@@ -113,6 +113,8 @@ export const registerGoogle = () => {
         // ...
       });
   };
+
+
 // //----Enviar correo de validación de Google -----
 // function emailVerification(auth) {
 //     sendEmailVerification(auth.currentUser)
