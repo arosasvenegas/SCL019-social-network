@@ -1,6 +1,6 @@
 
 import { getAuth,signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app, guardarTask, deletePost, editPost, updatePost, db} from "../firebase.js";
+import { app, guardarTask, deletePost, editPost, updatePost, db, likePost} from "../firebase.js";
 import {onSnapshot,query, orderBy, collection} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
 
@@ -84,10 +84,10 @@ export function muroPage() {
 
                  <div class="btnsPost">
             
-                 <input class="contador" id="contador" type="number"  value="0" name="" readonly /> 
+                 <input class="contador" id="contador" type="number"  value="${task.likeCounter}" name="" readonly /> 
 
 
-                 <button class="heart" id="heart" ><i class="fa-regular fa-heart"></i></button> 
+                 <button class="heart"  value=${doc.id} ><i class="fa-regular fa-heart"></i></button> 
                  <button class="btnDelete" data-id="${doc.id}">Borrar</button>
                  <button class="btnEdit" data-id="${doc.id}">Editar</button>
                  </div>
@@ -97,15 +97,19 @@ export function muroPage() {
          });
          containerPost.innerHTML = html;
 
+         
          /*BOTON PARA DAR LIKE */
          const likebtn= containerPost.querySelectorAll(".heart");
          likebtn.forEach((btn) => {
          btn.addEventListener("click",() => {
-           const userId = auth.currentUser.uid;
-           likepost(like.value, userId)
+         
+           const userId = getAuth().currentUser.uid;
+           likePost(btn.value,userId) 
          })
   
   })
+
+
 
          /*BOTON PARA BORRAR POST */ 
          const btnsDelete = containerPost.querySelectorAll('.btnDelete')

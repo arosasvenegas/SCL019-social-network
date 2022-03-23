@@ -14,7 +14,7 @@ export const firebaseConfig = {
   
   export const app = initializeApp(firebaseConfig);
   export const db = getFirestore(app);
-  const auth = getAuth();
+  export const auth = getAuth();
   
   export const guardarTask= (titulo, descripcion) => {
     const docRef = addDoc(collection(db,"publicaciones"),{
@@ -33,6 +33,29 @@ export const firebaseConfig = {
     return docRef
   };
 
+  export const likePost = async (id, userId) => {
+
+    const postRef = doc(db, "publicaciones", id);
+    const docLike = await getDoc(postRef);
+    const dataLike = docLike.data();
+    console.log(dataLike)
+    const likesCount = dataLike.likeCounter;
+  
+    if ((dataLike.like).includes(userId)) {
+      await updateDoc(postRef, {
+        like: arrayRemove(userId),
+        likeCounter: likesCount - 1,
+      });
+    } else {
+      await updateDoc(postRef, {
+        like: arrayUnion(userId),
+        likeCounter: likesCount + 1,
+      });
+    }
+  };
+  
+
+
     export const mostrarTask = () => getDocs(collection(db, 'publicaciones'));
 
     export const deletePost = (id) => deleteDoc(doc(db, "publicaciones", id));
@@ -41,9 +64,4 @@ export const firebaseConfig = {
 
     export const updatePost = (id, newFields) => updateDoc(doc(db, "publicaciones", id), newFields);
 
-   
-
-  //const likePost = () => updateDoc(doc(db, "publicaciones"))
-
-
-   
+    
