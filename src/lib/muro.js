@@ -19,15 +19,16 @@ export function muroPage() {
      <div class="mainPost" id="mainPost">
      <section class="categoryHome" id="categoryHome">
      <button class="categoryFood" id="btnfood"> <i class="fa-solid fa-paw"></i> <br> Alimentacion</button>
-     <button class="categoryclean" id="categoryclean"> <i class="fa-solid fa-paw"></i><br> Higine</button>
+     <button class="categoryclean" id="categoryclean"> <i class="fa-solid fa-paw"></i><br> Higiene</button>
      <button class="categoryVet" id="categoryVet"> <i class="fa-solid fa-paw"></i> <br>Veterinario</button>
      <button class="categoryGo" id="categoryGo"> <i class="fa-solid fa-paw"></i><br>Paseo</button>
      <button class="categoryPlay" id="categoryPlay"> <i class="fa-solid fa-paw"></i> <br>Juegos</button>
      <button class="categoryAcc" id="categoryAcc"> <i class="fa-solid fa-paw"></i> <br>Accesorios</button>
      </section>
 
-     <section class="containerPost" id="containerPost">
 
+
+     <div class="containerForm">
      <form id="task-form" class="task-form">
       <label for="title"> Titulo: </label>
       <input type="text" class="taskTittle" id="task-title">
@@ -42,7 +43,9 @@ export function muroPage() {
       <button id="btnTask" class="btnTask"> Postear </button>
 
       </form>
-
+    </div>
+     <section class="containerPost" id="containerPost">
+    
       <div class="containerTask" id="containerTask"></div>
     
       <div >

@@ -295,22 +295,29 @@
   .containerPost {
     background-color: rgb(221, 221, 221);
     height: 700px;
-    padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 20px;
     overflow: scroll;
   }
+  .containerForm {
+    position: fixed;
+    margin-left: 51px;
+    margin-top: 50px;
+  }
+  .containerTask {
+    margin-top: 250px;
+  }
   .task-form {
     background-color: white;
-    width: 250px;
-    height: 175px;
+    width: 230px;
+    height: 153px;
     margin-right: 40%;
     color: #4f5252;
     border: none;
     border-radius: 15px;
     font-size: 15px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   }
   .taskTittle {
@@ -326,15 +333,15 @@
     border: none;
   }
   .taskDescription {
-    width: 240px;
-    height: 65px;
+    width: 220px;
+    height: 50px;
     margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 15px;
     border: 2px solid rgba(254, 189, 129);
     resize: none;
   }
-  #heart {
+  .heart {
     color: #de264c;
     margin-right: 20px;
     background-color: #ffffff;
@@ -370,7 +377,7 @@
   .comentario {
     color: #4f5252;
     width: 240px;
-    height: 100px;
+    height: 75px;
     margin-bottom: 5px;
     resize: none;
     border: none;
@@ -525,6 +532,8 @@
 
   .containerPost {
     flex: 1 0 auto;
+    height: 1060px;
+    margin-top: 30px;
   }
 
   .mainPost {
@@ -543,28 +552,38 @@
     margin: 15px;
     margin-left: 30px;
     font-size: 20px;
+    margin-top: 27px;
   }
   .logOut {
     margin-top: 20px;
   }
   .task-form {
-    width: 440px;
-    height: 175px;
+    width: 423px;
+    height: 140px;
   }
   .taskTittle {
     width: 280px;
   }
   .taskDescription {
-    width: 430px;
-    height: 65px;
+    width: 400px;
+    height: 45px;
   }
   .post1 {
-    width: 440px;
-    height: 200px;
+    width: 425px;
+    height: 195px;
+    padding: 20px;
   }
   .comentario {
     width: 420px;
-    height: 100px;
+    height: 75px;
+  }
+  .containerForm {
+    position: fixed;
+    margin-left: 300px;
+    margin-top: 30px;
+  }
+  .containerTask {
+    margin-top: 200px;
   }
 }
 /* ------------------------------------------------------
@@ -603,38 +622,52 @@
   #logoMuro {
     width: 200px;
   }
-
+  .categoryHome {
+    flex: 0 1 250px;
+  }
   .categoryFood,
   .categoryclean,
   .categoryVet,
   .categoryGo,
   .categoryPlay,
   .categoryAcc {
-    width: 190px;
+    width: 160px;
     height: 70px;
     margin-top: 20px;
-    margin-left: 18px;
+    margin-left: 20px;
     font-size: 20px;
+    margin-top: 30px;
+  }
+  .containerForm {
+    position: fixed;
+    margin-left: 299px;
+    margin-top: 30px;
+  }
+  .containerTask {
+    margin-top: 250px;
+    width: 950px;
   }
   .task-form {
-    width: 1000px;
-    height: 195px;
+    width: 950px;
+    height: 180px;
+    padding: 25px;
   }
   .taskTittle {
     width: 480px;
   }
   .taskDescription {
-    width: 950px;
-    height: 90px;
+    width: 940px;
+    height: 75px;
   }
 
   .post1 {
-    width: 1000px;
+    width: 950px;
     height: 200px;
+    padding: 25px;
   }
   .comentario {
-    width: 980px;
-    height: 100px;
+    width: 950px;
+    height: 70px;
   }
   .btnTask {
     width: 100px;
