@@ -79,16 +79,22 @@ export function muroPage() {
 
          querySnapshot.forEach(doc => {
             const task = doc.data();
-          
             const userId = getAuth().currentUser.uid;
           
+            html+=`
+            <div class="post1">
+             <h2 class="nombreUsuario"> ${task.name}</h2>
+               <h3 class="titulo">${task.titulo}</h3> 
+               <h4 class="fecha">${task.date}</h4>
+               <i class="fa-solid fa-ellipsis"></i>
+               <textarea class="comentario" readonly>${task.descripcion}</textarea>
+
+               <div class="btnsPost"></div>
+               `;
+            
             if ( task.userId == userId){
               html+=`
-              <div class="post1">
-               <h2 class="nombreUsuario"> ${task.name}</h2>
-                 <h3 class="titulo">${task.titulo}</h3> 
-                 <i class="fa-solid fa-ellipsis"></i>
-                 <textarea class="comentario" readonly>${task.descripcion}</textarea>
+             
 
               <div class="btnsPost">
                  <input class="contador" id="contador" type="number"  value="${task.likeCounter}" name="" readonly /> 
@@ -102,12 +108,7 @@ export function muroPage() {
             `;
             } else{
               html+=`
-              <div class="post1">
-              <h2 class="nombreUsuario"> ${task.name}</h2>
-                <h3 class="titulo">${task.titulo}</h3> 
-                <i class="fa-solid fa-ellipsis"></i>
-                <textarea class="comentario" readonly>${task.descripcion}</textarea>
-
+            
                  <div class="btnsPost">
                  <input class="contador" id="contador" type="number"  value="${task.likeCounter}" name="" readonly /> 
                  <button class="heart"  value=${doc.id} ><i class="fa-regular fa-heart"></i></button> 
