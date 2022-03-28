@@ -182,9 +182,11 @@ export function muroPage() {
             const titulo = formulario["task-title"]
             const descripcion = formulario["task-description"]
            
-
-            if (!editStatus){
+            if (titulo.value === '' || descripcion.value ===''){
+              alert('No se puede publicar un post vacío')
+            }else if (!editStatus){
               guardarTask(titulo.value , descripcion.value);
+             
             } else {
               updatePost(id,{
                 titulo: titulo.value, 
