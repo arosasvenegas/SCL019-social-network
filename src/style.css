@@ -342,25 +342,23 @@
     resize: none;
   }
 
-  .nombreUsuario{
+  .nombreUsuario {
     font-size: small;
     color: rgb(165, 164, 164);
     margin-bottom: 5px;
   }
 
-.tituloPost{
- font-size: medium;
-  color: rgb(246, 91, 85);
-  margin-bottom: 10px;
-}
-
-  .fecha{
-font-size: xx-small;
-color: rgb(216, 214, 214);
-margin-bottom: 5px;
+  .tituloPost {
+    font-size: medium;
+    color: rgb(246, 91, 85);
+    margin-bottom: 10px;
   }
 
-
+  .fecha {
+    font-size: xx-small;
+    color: rgb(216, 214, 214);
+    margin-bottom: 5px;
+  }
 
   hr.rounded {
     border-top: 3px solid rgb(226, 224, 224);
@@ -398,7 +396,7 @@ margin-bottom: 5px;
     padding: 10px;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   }
- 
+
   .comentario {
     color: #4f5252;
     width: 240px;
@@ -666,7 +664,7 @@ margin-bottom: 5px;
   }
   .containerForm {
     position: fixed;
-    margin-left: 299px;
+    margin-left: 245px;
     margin-top: 30px;
   }
   .containerTask {
@@ -674,7 +672,7 @@ margin-bottom: 5px;
     width: 1200px;
   }
   .task-form {
-    width: 1200px;
+    width: 1000px;
     height: 180px;
     padding: 25px;
   }
@@ -682,40 +680,40 @@ margin-bottom: 5px;
     width: 480px;
   }
   .taskDescription {
-    width: 1150px;
+    width: 1000px;
     height: 75px;
   }
 
   .post1 {
-    width: 1200px;
+    width: 1000px;
     height: 265px;
     padding: 25px;
   }
 
-  .nombreUsuario{
+  .nombreUsuario {
     font-size: medium;
     margin-bottom: 10px;
   }
 
-.tituloPost{
-  font-size: x-large;
-  margin-bottom: 10px;
-}
+  .tituloPost {
+    font-size: x-large;
+    margin-bottom: 10px;
+  }
 
-  .fecha{
-font-size: small;
-margin-bottom: 10px;
+  .fecha {
+    font-size: small;
+    margin-bottom: 10px;
   }
 
   .comentario {
     font-size: medium;
-    width: 1170px;
+    width: 1000px;
     height: 85px;
     margin-top: 7px;
     margin-bottom: 7px;
   }
 
-  .fa-heart{
+  .fa-heart {
     font-size: large;
   }
   .btnDelete,
