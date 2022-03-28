@@ -341,11 +341,39 @@
     border: 2px solid rgba(254, 189, 129);
     resize: none;
   }
+
+  .nombreUsuario{
+    font-size: small;
+    color: rgb(165, 164, 164);
+    margin-bottom: 5px;
+  }
+
+.tituloPost{
+ font-size: medium;
+  color: rgb(246, 91, 85);
+  margin-bottom: 10px;
+}
+
+  .fecha{
+font-size: xx-small;
+color: rgb(216, 214, 214);
+margin-bottom: 5px;
+  }
+
+
+
+  hr.rounded {
+    border-top: 3px solid rgb(226, 224, 224);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .heart {
     color: #de264c;
     margin-right: 20px;
     background-color: #ffffff;
     border: none;
+    margin-top: 10px;
   }
   .btnTask {
     width: 70px;
@@ -362,7 +390,7 @@
   .post1 {
     background-color: white;
     width: 250px;
-    height: 200px;
+    height: 260px;
     margin-top: 18px;
     border: none;
     border-radius: 15px;
@@ -370,10 +398,7 @@
     padding: 10px;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   }
-  .titulo {
-    color: black;
-    margin-bottom: 8px;
-  }
+ 
   .comentario {
     color: #4f5252;
     width: 240px;
@@ -381,11 +406,12 @@
     margin-bottom: 5px;
     resize: none;
     border: none;
+    font-size: x-small;
   }
   .btnDelete,
   .btnEdit {
     width: 70px;
-    height: 30px;
+    height: 25px;
     margin: 5px;
     cursor: pointer;
     border-radius: 10px;
@@ -570,7 +596,7 @@
   }
   .post1 {
     width: 425px;
-    height: 195px;
+    height: 230px;
     padding: 20px;
   }
   .comentario {
@@ -645,10 +671,10 @@
   }
   .containerTask {
     margin-top: 250px;
-    width: 950px;
+    width: 1200px;
   }
   .task-form {
-    width: 950px;
+    width: 1200px;
     height: 180px;
     padding: 25px;
   }
@@ -656,18 +682,46 @@
     width: 480px;
   }
   .taskDescription {
-    width: 940px;
+    width: 1150px;
     height: 75px;
   }
 
   .post1 {
-    width: 950px;
-    height: 200px;
+    width: 1200px;
+    height: 265px;
     padding: 25px;
   }
+
+  .nombreUsuario{
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+
+.tituloPost{
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
+  .fecha{
+font-size: small;
+margin-bottom: 10px;
+  }
+
   .comentario {
-    width: 950px;
-    height: 70px;
+    font-size: medium;
+    width: 1170px;
+    height: 85px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .fa-heart{
+    font-size: large;
+  }
+  .btnDelete,
+  .btnEdit {
+    height: 35px;
+    width: 100px;
   }
   .btnTask {
     width: 100px;
@@ -681,5 +735,6 @@
   }
   .btnTask:hover {
     background-color: rgba(254, 189, 129);
+    color: white;
   }
 }

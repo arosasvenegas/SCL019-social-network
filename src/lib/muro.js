@@ -35,7 +35,7 @@ export function muroPage() {
       
       
       <br>
-      <label for="title"> Descripción: </label>
+      <label for="title"> Descripción: </label><br>
       <textarea class="taskDescription" id="task-description" cols="15" rows="6"></textarea>
       <br>
     
@@ -83,12 +83,12 @@ export function muroPage() {
           
             html+=`
             <div class="post1">
-             <h2 class="nombreUsuario"> ${task.name}</h2>
-               <h3 class="titulo">${task.titulo}</h3> 
+             <h2 class="tituloPost"> ${task.titulo}</h2>
+               <h3 class="nombreUsuario">${task.name}</h3> 
                <h4 class="fecha">${task.date}</h4>
-               <i class="fa-solid fa-ellipsis"></i>
+               <hr class="rounded">
                <textarea class="comentario" readonly>${task.descripcion}</textarea>
-
+               <hr class="rounded">
                <div class="btnsPost"></div>
                `;
             
