@@ -34,13 +34,14 @@ Pensando en el usuario, se crea una pagina principal, cuyas opciones son, ir a l
 
 Comenzamos con un prototipo de baja fidelidad de las diferentes vistas disponibles en nuestra red social y partimos con las vista de bienvenida, vista registro y vista iniciar sesion. Luego de realizar el prototitpo de baja fidelidad, comenzamos a crear y definir nuestro proyecto, basandonos en el prototipo de alta fidelidad. Para definir estructura de las vistas y definir colores. Para su creacion y funcionalidad se implemento HTML, CSS, JavaScript y firebase.
 
-<img src="src/imgREADME/prototipoBaja.png">
+<img src="src/imgREADME/prototipoBaja.png" width="100" height="100">
 
 ### Segunda Historia de Usuario
 
 Visualizacion de categorias
 
 Pensando ens el usuario, se agregaron categorias para que usuario pudiera interactuar con ellas y asi poder filtrar la informacion, haciendo mas efectiva su busqueda.
+
 <img src="src/imgREADME/categoriasLucchi.png">
 
 ### Tercera Historia de Usuario
