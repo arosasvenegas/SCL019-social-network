@@ -1,5 +1,5 @@
 import { getAuth, signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { app } from "../Firebase.js";
+import { app } from "../firebase.js";
 import { registerGoogle } from "../lib/register.js";
 import { muroPage } from "./muro.js";
 
