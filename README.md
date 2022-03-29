@@ -32,7 +32,7 @@ Vista de inicio de sesión y registro
 
 Pensando en el usuario, se crea una pagina principal, cuyas opciones son, ir a la vista de inicio de sesion o la vista de registro. En ambas vistas se encuentra la opcion de usar email y contraseña, o utilizar una cuenta de google, para realizar el inicio de sesion o registro.
 
-Comenzamos con un prototipo de baja fidelidad de las diferentes vistas disponibles en nuestra red social y partimos con las vista de bienvenida, vista registro y vista iniciar sesion. Luego de realizar el prototitpo de baja fidelidad, comenzamos a crear y definir nuestro proyecto, basandonos en el prototipo de alta fidelidad. Para definir estructura de las vistas y definir colores. Para su creacion y funcionalidad se implemento HTML, CSS, JavaScript y Firebase.
+Comenzamos con un prototipo de baja fidelidad de las diferentes vistas disponibles en nuestra red social y partimos con las vista de bienvenida, vista registro y vista iniciar sesion. Luego de realizar el prototitpo de baja fidelidad, comenzamos a crear y definir nuestro proyecto, basandonos en el prototipo de alta fidelidad. Para definir estructura de las vistas y definir colores. Para su creacion y funcionalidad se implemento HTML, CSS, JavaScript y firebase.
 
 <img src="src/imgREADME/prototipoBaja.png">
 
