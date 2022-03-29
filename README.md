@@ -54,4 +54,4 @@ Dar likes y tener una cuenta de ellos
 
 Se creo la opcion de poder dar likes a las publicaciones y ver el total de estos. Esta opcion esta disponible para todas las publicaciones, sin importar el usuario.
 
-<img src="src/imgREADME/publicacionesPost.png">
+<img src="src/imgREADME/publicacionPost.png">
