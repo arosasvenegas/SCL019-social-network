@@ -63,5 +63,6 @@ export const firebaseConfig = {
     export const editPost = (id) => getDoc(doc(db, "publicaciones", id));
 
     export const updatePost = (id, newFields) => updateDoc(doc(db, "publicaciones", id), newFields);
+    
 
     

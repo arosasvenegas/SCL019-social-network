@@ -14,4 +14,5 @@ observer()
     router(window.location.hash);
     observer()
   });
+  
       

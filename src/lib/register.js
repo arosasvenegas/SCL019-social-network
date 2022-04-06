@@ -113,7 +113,7 @@ export const registerGoogle = () => {
         // ...
       });
   };
-
+ 
 
 // //----Enviar correo de validación de Google -----
 // function emailVerification(auth) {

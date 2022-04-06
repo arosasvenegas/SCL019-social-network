@@ -57,6 +57,8 @@ signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
     // Signed in
     const user = userCredential.user;
       console.log(user);
+      window.location.hash = '#/muro';
+
 
 
   })
